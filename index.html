@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="timer">
+        <span id="seconds">00</span>
+    </div>
+    <div class="input-container">
+        <button id="decreaseButton">-</button>
+        <input type="number" id="timeInput" min="1" value="10" placeholder="Segundos">
+        <button id="increaseButton">+</button>
+    </div>
+    <div class="letters-container">
+        <div class="letter-box" data-time="10">A</div>
+        <div class="letter-box" data-time="10">B</div>
+        <div class="letter-box" data-time="10">C</div>
+        <div class="letter-box" data-time="10">D</div>
+        <div class="letter-box" data-time="10">E</div>
+        <div class="letter-box" data-time="10">F</div>
+        <div class="letter-box" data-time="10">G</div>
+        <div class="letter-box" data-time="10">H</div>
+        <div class="letter-box" data-time="10">I</div>
+        <div class="letter-box" data-time="10">J</div>
+        <div class="letter-box" data-time="10">L</div>
+        <div class="letter-box" data-time="10">M</div>
+        <div class="letter-box" data-time="10">N</div>
+        <div class="letter-box" data-time="10">O</div>
+        <div class="letter-box" data-time="10">P</div>
+        <div class="letter-box" data-time="10">R</div>
+        <div class="letter-box" data-time="10">S</div>
+        <div class="letter-box" data-time="10">T</div>
+        <div class="letter-box" data-time="10">U</div>
+        <div class="letter-box" data-time="10">V</div>
+    </div>
+    <audio id="alarmSound" src="acabou.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
