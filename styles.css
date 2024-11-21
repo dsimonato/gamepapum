@@ -4,21 +4,44 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Ajusta a altura para ocupar a tela inteira */
-    margin: 0px; /* Remove margens padrão */
+    margin: 0; /* Remove margens padrão */
     background-color: #000000; /* Fundo preto */
     font-family: 'Barrio', cursive; /* Fonte Barrio */
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#displayTheme {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 0px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #840a99; /* Botão roxo */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
 }
 
 .timer {
     font-size: 200px; /* Tamanho da fonte atualizado */
     color: #ffb300; /* Números em amarelo */
-    margin-bottom: 50px; /* Margem inferior atualizada */
+    margin-bottom: 0px; /* Margem inferior atualizada */
 }
 
 .input-container {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-align: center;
     color: #FFFFFF; /* Texto branco */
 }
@@ -31,7 +54,7 @@ input[type="number"] {
     color: #FFFFFF; /* Cor do número branco */
     text-align: center; /* Centralizar o número */
     font-size: 16px;
-    padding: 5px;
+    padding: 0px;
     width: 100px;
     border: none; /* Remove o contorno */
 }
@@ -42,16 +65,6 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-button {
-    padding: 20px 20px;
-    font-size: 35px;
-    cursor: pointer;
-    background-color: #840a99; /* Botão roxo */
-    color: #FFFFFF;
-    border: none; /* Remove o contorno */
-    border-radius: 15px;
-    width: 100%; /* Ajusta o botão ao tamanho da tela horizontalmente */
-}
 
 #decreaseButton, #increaseButton {
     background-color: #000000; /* Fundo preto */
@@ -65,7 +78,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 15px;
+    margin-top: 10px;
 }
 
 .letter-box {
@@ -83,5 +96,14 @@ button {
 }
 
 .letter-box.active {
-    background-color: #ffb300; /* Fundo amarelo */
+    background-color: #000000; /* Fundo amarelo #ffb300 */
+}
+
+/* Media query para telas grandes */
+@media (min-width: 768px) {
+    .letters-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
 }

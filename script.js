@@ -5,6 +5,14 @@ const timeInput = document.getElementById('timeInput');
 const decreaseButton = document.getElementById('decreaseButton');
 const increaseButton = document.getElementById('increaseButton');
 const letterBoxes = document.querySelectorAll('.letter-box');
+const searchButton = document.getElementById('searchButton');
+const displayTheme = document.getElementById('displayTheme');
+
+searchButton.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * Object.keys(temas).length);
+    const randomTheme = Object.values(temas)[randomIndex];
+    displayTheme.textContent = `${randomTheme}`;
+});
 
 function timer(seconds) {
     clearInterval(countdown);
@@ -42,6 +50,9 @@ letterBoxes.forEach(box => {
         const seconds = parseInt(timeInput.value);
         timer(seconds);
         box.classList.add('active');
+        if (document.querySelectorAll('.letter-box.active').length === letterBoxes.length) {
+            resetLetterBoxes();
+        }
     });
 });
 
